@@ -1,5 +1,6 @@
+//DATA, HORA E PALÍNDROMO, RESPECTIVAMENTE
 
-window.addEventListener("load", ()=> {
+window.addEventListener("load", ()=> {  //DATA
     let dia = new Date();
     let diaMes = dia.getDate();
     let diaSemana = dia.getDay();
@@ -69,21 +70,58 @@ window.addEventListener("load", ()=> {
             break;
     }
 
-    let res = diaSemana + ", " + diaMes + " de " + mes + " de " + ano + ".";
+    let res = diaSemana + ", " + diaMes + " de " + mes + " de " + ano;
 
     document.getElementById("data").innerHTML = res;
 });
 
 
-function setHora() {
+function setHora() {    //FUNÇÃO HORA
     let dia = new Date();
     let horas = dia.getHours();
     let minutos = dia.getMinutes();
     let segundos = dia.getSeconds();
 
-    let res = horas + ":" + minutos + ":" + segundos;
+    let res = horas.toString().padStart(2, '0') + ":" + minutos.toString().padStart(2, '0') + ":" + segundos.toString().padStart(2, '0');
 
     document.getElementById("hora").innerHTML = res;
 }
 
-document.addEventListener(setInterval(setHora, 1000));
+setInterval(setHora, 1000);  //INTERVALO E CHAMADA DE FUNÇÃO HORA
+
+
+document.getElementById("isPalindrome").addEventListener("click", ()=> {  //PALÍNDROMO
+    let str = document.getElementById("testePalindromo").value;
+
+    if(str != "") {
+        str = str.replaceAll(" ", "");
+        str = str.replaceAll(".", "");
+        str = str.replaceAll(",", "");
+        str = str.replaceAll("-", "");
+        str = str.replaceAll(";", "");
+        str = str.replaceAll("á", "a");
+        str = str.replaceAll("à", "a");
+        str = str.replaceAll("ã", "a");
+        str = str.replaceAll("â", "a");
+        str = str.replaceAll("é", "e");
+        str = str.replaceAll("ê", "e");
+        str = str.replaceAll("í", "i");
+        str = str.replaceAll("ó", "o");
+        str = str.replaceAll("õ", "o");
+        str = str.replaceAll("ô", "o");
+        str = str.replaceAll("ú", "u");
+        str = str.toLowerCase();
+        let strContraria = "";
+
+        for(i = str.length - 1; i >= 0; i--) {
+            strContraria = strContraria + str[i];
+        }
+
+        if(str == strContraria)
+            alert("O texto é palíndromo!");
+        else
+            alert("O texto não é palíndromo!");
+    }
+    else
+        alert("Nada foi digitado! Insira um dado qualquer!");
+});
