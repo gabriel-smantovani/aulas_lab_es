@@ -200,7 +200,7 @@ document.getElementById('dataNascimento').addEventListener('blur', function() {
         }
 
         let e = document.createElement('P');
-        let t = document.createTextNode('Data de nascimento inválida');
+        let t = document.createTextNode('Data inválida');
         e.appendChild(t);
         
         myNode.appendChild(e);

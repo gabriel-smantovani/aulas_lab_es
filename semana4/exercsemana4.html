@@ -14,62 +14,88 @@
     </header>
     <section class="conteudo">
 
-        <h1>Formulário de Cadastro:</h1>
-        <section class="formulario">
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo">
-            <div id="validacaoNome">
-            </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="fulano.com">
-                <div id="validacaoEmail">
+        <section class="formulario"> <!--flex col-->
+            <article class="article-row">
+                <h1>Formulário de Cadastro</h1>
+            </article>
 
-                </div>    
-                <label for="dataNascimento">Data Nascimento:</label>
-                <input type="date" name="dataNascimento" id="dataNascimento">
-                <div id="validacaoDataNascimento">
-
-                </div>    
-            </div>
-            <div>
-                <label for="telefoneFixo">Telefone Fixo:</label>
-                <input type="text" name="telefoneFixo" id="telefoneFixo" placeholder="(99)9999-9999">
-                <div id="validacaoTelefoneFixo">
+            <article class="article-col"> <!--nome   flex col-->
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo">
+                <div class="validacoes" id="validacaoNome">
 
                 </div>
-                <label for="telefoneCelular">Telefone Celular:</label>
-                <input type="text" name="telefoneCelular" id="telefoneCelular" placeholder="(99)99999-9999">
-                <div id="validacaoTelefoneCelular">
+            </article>
+            <article class="article-row"> <!--email data row-->
+                <article class="article-col" id="article-email"> <!--email col-->
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="fulano.com">
+                    <div class="validacoes" id="validacaoEmail">
+
+                    </div>
+                </article>
+                <article class="article-col" id="article-data"> <!--data col-->
+                    <label for="dataNascimento">Data Nascimento:</label>
+                    <input type="date" name="dataNascimento" id="dataNascimento">
+                    <div class="validacoes" id="validacaoDataNascimento">
+                        
+                    </div>
+                </article>
+            </article>
+            <article class="article-row"> <!--telefones tipo row-->
+                <article class="article-col" id="article-fixo">  <!--fixo col-->
+                    <label for="telefoneFixo">Telefone Fixo:</label>
+                    <input type="text" name="telefoneFixo" id="telefoneFixo" placeholder="(99)9999-9999">
+                    <div class="validacoes" id="validacaoTelefoneFixo">
+
+                    </div>
+                </article>
+                <article class="article-col" id="article-celular"> <!--celular col-->
+                    <label for="telefoneCelular">Telefone Celular:</label>
+                    <input type="text" name="telefoneCelular" id="telefoneCelular" placeholder="(99)99999-9999">
+                    <div class="validacoes" id="validacaoTelefoneCelular">
+
+                    </div>
+                </article>
+                <article class="article-col" id="article-tipos-usuario"> <!--tipos col-->
+                    <article class="article-row" id="article-aluno"> <!--aluno row-->
+                        <input type="radio" name="tipoUsuario" id="usuarioAluno" value="usuarioAluno" checked>
+                        <label for="usuarioAluno">Aluno</label>
+                    </article>
+                    <article class="article-row" id="article-professor"> <!--professor row-->
+                        <input type="radio" name="tipoUsuario" id="usuarioProfessor" value="usuarioProfessor">
+                        <label for="usuarioProfessor">Professor</label>
+                    </article>
+                </article>
+            </article>
+            <article class="article-row"> <!--area matricula row-->
+                <article class="article-col" id="article-area"> <!--area col-->
+                    <label for="areaAtuacao" id="labelAreaAtuacao">Curso:</label>
+                    <input type="text" name="areaAtuacao" id="areaAtuacao" placeholder="Digite sua área de atuação">
+                    <div class="validacoes" id="validacaoAreaAtuacao">
+
+                    </div>
+                </article>
+                <article class="article-col" id="article-matricula"> <!--matricula col-->
+                    <label for="matricula">Matrícula:</label>
+                    <input type="text" name="matricula" id="matricula" placeholder="Digite sua matrícula">
+                    <div class="validacoes" id="validacaoMatricula">
+
+                    </div>
+                </article>
+            </article>
+            <article class="article-col" id="article-lattes"> <!--lattes col-->
+                <label for="linkLattes">Lattes:</label>
+                <input type="text" name="linkLattes" id="linkLattes" placeholder="Digite aqui o endereço para seu Lattes">
+                <div class="validacoes" id="validacaoLinkLattes">
 
                 </div>
-                <div>
-                    <label for="usuarioAluno">Aluno</label>
-                    <input type="radio" name="tipoUsuario" id="usuarioAluno" value="usuarioAluno" checked>
-                    <label for="usuarioProfessor">Professor</label>
-                    <input type="radio" name="tipoUsuario" id="usuarioProfessor" value="usuarioProfessor">
-                </div>
-            </div>
-            <div>
-                <label for="areaAtuacao" id="labelAreaAtuacao">Área:</label>
-                <input type="text" name="areaAtuacao" id="areaAtuacao" placeholder="Digite sua área de atuação">
-                <div id="validacaoAreaAtuacao">
+            </article>
+            <article class="article-row" id="article-buttons"> <!--botoes row-->
+                <button id="enviar">Enviar</button>
+                <button id="redefinir">Redefinir</button>
+            </article>
 
-                </div>
-                <label for="matricula">Matrícula:</label>
-                <input type="text" name="matricula" id="matricula" placeholder="Digite sua matrícula">
-                <div id="validacaoMatricula">
-
-                </div>
-            </div>
-            <label for="linkLattes">Lattes:</label>
-            <input type="text" name="linkLattes" id="linkLattes" placeholder="Digite aqui o endereço para seu Lattes">
-            <div id="validacaoLinkLattes">
-
-            </div>
-
-            <button id="enviar">Enviar</button>
-            <button id="redefinir">Redefinir</button>
         </section>
 
     </section>
