@@ -182,9 +182,23 @@ document.getElementById('email').addEventListener('blur', function() {
         myNode.appendChild(e);
     }
     else {
-        let myNode = document.getElementById('validacaoEmail');
-        while(myNode.firstChild) {
-            myNode.removeChild(myNode.lastChild);
+        if(document.getElementById('email').value.toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+            let myNode = document.getElementById('validacaoEmail');
+            while(myNode.firstChild) {
+                myNode.removeChild(myNode.lastChild);
+            }
+        }
+        else {
+            let myNode = document.getElementById('validacaoEmail');
+            while(myNode.firstChild) {
+                myNode.removeChild(myNode.lastChild);
+            }
+
+            let e = document.createElement('P');
+            let t = document.createTextNode('Email inválido');
+            e.appendChild(t);
+            
+            myNode.appendChild(e);
         }
     }
 })
@@ -217,7 +231,7 @@ document.getElementById('dataNascimento').addEventListener('blur', function() {
 document.getElementById('telefoneFixo').addEventListener('blur', function() {
     let conteudo = document.getElementById('telefoneFixo').value;
     conteudo = conteudo.trim();
-    if(conteudo == '') {
+    if(conteudo.length != 13) {
         let myNode = document.getElementById('validacaoTelefoneFixo');
         while(myNode.firstChild) {
             myNode.removeChild(myNode.lastChild);
@@ -238,10 +252,31 @@ document.getElementById('telefoneFixo').addEventListener('blur', function() {
 })
 
 
+document.getElementById('telefoneFixo').addEventListener('keydown', function(event) {
+    
+    if(event.key != 'Backspace' && event.key != 'Delete') {
+        let tel = document.getElementById('telefoneFixo').value;
+        switch(tel.length) {
+            case 1:
+                tel = '(' + tel;
+                break;
+            case 3:
+                tel = tel + ')';
+                break;
+            case 8:
+                tel = tel + '-';
+                break;
+        }
+        document.getElementById('telefoneFixo').value = tel;
+    }
+
+})
+
+
 document.getElementById('telefoneCelular').addEventListener('blur', function() {
     let conteudo = document.getElementById('telefoneCelular').value;
     conteudo = conteudo.trim();
-    if(conteudo == '') {
+    if(conteudo.length != 14) {
         let myNode = document.getElementById('validacaoTelefoneCelular');
         while(myNode.firstChild) {
             myNode.removeChild(myNode.lastChild);
@@ -259,6 +294,27 @@ document.getElementById('telefoneCelular').addEventListener('blur', function() {
             myNode.removeChild(myNode.lastChild);
         }
     }
+})
+
+
+document.getElementById('telefoneCelular').addEventListener('keydown', function(event) {
+    
+    if(event.key != 'Backspace' && event.key != 'Delete') {
+        let tel = document.getElementById('telefoneCelular').value;
+        switch(tel.length) {
+            case 1:
+                tel = '(' + tel;
+                break;
+            case 3:
+                tel = tel + ')';
+                break;
+            case 9:
+                tel = tel + '-';
+                break;
+        }
+        document.getElementById('telefoneCelular').value = tel;
+    }
+    
 })
 
 
@@ -310,9 +366,29 @@ document.getElementById('matricula').addEventListener('blur', function() {
         myNode.appendChild(e);
     }
     else {
-        let myNode = document.getElementById('validacaoMatricula');
-        while(myNode.firstChild) {
-            myNode.removeChild(myNode.lastChild);
+        if(document.getElementById('usuarioAluno').checked && document.getElementById('matricula').value.length == 10) {
+            let myNode = document.getElementById('validacaoMatricula');
+            while(myNode.firstChild) {
+                myNode.removeChild(myNode.lastChild);
+            }
+        }
+        else if(document.getElementById('usuarioProfessor').checked && document.getElementById('matricula').value.length == 5) {
+            let myNode = document.getElementById('validacaoMatricula');
+            while(myNode.firstChild) {
+                myNode.removeChild(myNode.lastChild);
+            }
+        }
+        else {
+            let myNode = document.getElementById('validacaoMatricula');
+            while(myNode.firstChild) {
+                myNode.removeChild(myNode.lastChild);
+            }
+
+            let e = document.createElement('P');
+            let t = document.createTextNode('Matrícula inválida');
+            e.appendChild(t);
+            
+            myNode.appendChild(e);
         }
     }
 })
