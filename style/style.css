@@ -209,3 +209,8 @@ header nav a {
     background-color: rgba(236, 13, 13, 1);
     outline: none;
 }
+
+.conteudo .conteudoEntrada .formulario {
+    display: flex;
+    flex-direction: column;
+}
