@@ -20,7 +20,7 @@
             </article>
 
             <article class="article-col"> <!--nome   flex col-->
-                <label for="nome">Nome:</label>
+                <label for="nome">*Nome:</label>
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo">
                 <div class="validacoes" id="validacaoNome">
 
@@ -28,14 +28,14 @@
             </article>
             <article class="article-row"> <!--email data row-->
                 <article class="article-col" id="article-email"> <!--email col-->
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" placeholder="fulano@dominio.com">
+                    <label for="email">*Email:</label>
+                    <input type="text" name="email" id="email" placeholder="fulano@dominio.com">
                     <div class="validacoes" id="validacaoEmail">
 
                     </div>
                 </article>
                 <article class="article-col" id="article-data"> <!--data col-->
-                    <label for="dataNascimento">Data Nascimento:</label>
+                    <label for="dataNascimento">*Data Nascimento:</label>
                     <input type="date" name="dataNascimento" id="dataNascimento">
                     <div class="validacoes" id="validacaoDataNascimento">
                         
@@ -44,14 +44,14 @@
             </article>
             <article class="article-row"> <!--telefones tipo row-->
                 <article class="article-col" id="article-fixo">  <!--fixo col-->
-                    <label for="telefoneFixo">Telefone Fixo:</label>
+                    <label for="telefoneFixo">*Telefone Fixo:</label>
                     <input type="text" name="telefoneFixo" id="telefoneFixo" placeholder="(99)9999-9999" maxlength="13">
                     <div class="validacoes" id="validacaoTelefoneFixo">
 
                     </div>
                 </article>
                 <article class="article-col" id="article-celular"> <!--celular col-->
-                    <label for="telefoneCelular">Telefone Celular:</label>
+                    <label for="telefoneCelular">*Telefone Celular:</label>
                     <input type="text" name="telefoneCelular" id="telefoneCelular" placeholder="(99)99999-9999" maxlength="14">
                     <div class="validacoes" id="validacaoTelefoneCelular">
 
@@ -70,14 +70,14 @@
             </article>
             <article class="article-row"> <!--area matricula row-->
                 <article class="article-col" id="article-area"> <!--area col-->
-                    <label for="areaAtuacao" id="labelAreaAtuacao">Curso:</label>
+                    <label for="areaAtuacao" id="labelAreaAtuacao">*Curso:</label>
                     <input type="text" name="areaAtuacao" id="areaAtuacao" placeholder="Digite sua área de atuação">
                     <div class="validacoes" id="validacaoAreaAtuacao">
 
                     </div>
                 </article>
                 <article class="article-col" id="article-matricula"> <!--matricula col-->
-                    <label for="matricula">Matrícula:</label>
+                    <label for="matricula">*Matrícula:</label>
                     <input type="text" name="matricula" id="matricula" placeholder="Digite sua matrícula">
                     <div class="validacoes" id="validacaoMatricula">
 
@@ -95,10 +95,14 @@
                 <button id="enviar">Enviar</button>
                 <button id="redefinir">Redefinir</button>
             </article>
+            <article class="article-row">
+                <div class="validacoes" id="validacaoCadastro">
 
+                </div>
+            </article>
         </section>
 
     </section>
-    <script language="JavaScript" type="text/JavaScript" src="exerc.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="Pessoa.js"></script>
 </body>
 </html>
