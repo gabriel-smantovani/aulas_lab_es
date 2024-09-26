@@ -214,3 +214,123 @@ header nav a {
     display: flex;
     flex-direction: column;
 }
+
+/* SEMANA 5 */
+
+.tituloEx5 {
+    font-size: 2em;
+}
+
+#descricaoTarefa {
+    height: 3em;
+    min-height: 3em;
+}
+
+#sectionAdicionarTarefa {
+    display: flex;
+    flex-direction: column;
+}
+
+#areaGerenciamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#listaTarefas {
+    width: 95%;
+    margin: 1em 0 2em 0;
+    padding-top: 0.2em;
+    color: rgb(30, 30, 30);
+    visibility: hidden;
+}
+
+#btnAdicionarTarefa {
+    width: 95%;
+    min-height: 3em;
+}
+
+.divTarefa {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 3em;
+    margin-top: 0.3em;
+    background-color: rgba(223, 211, 211, 0.774);
+    border: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.divTituloTarefa {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1em;
+    width: 60%;
+    max-width: 60%;
+    box-sizing: border-box;
+}
+
+.divTarefaBotoes {
+    display: flex;
+    width: 40%;
+    max-width: 40%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+.btnDetalhes {
+    width: 30% !important;
+    height: 1em;
+    background-color: rgba(0, 0, 255, 0.7) !important;
+}
+
+.btnConcluir {
+    width: 30% !important;
+    height: 1em;
+    background-color: rgba(0, 128, 0, 0.7) !important;
+}
+
+.btnRemover {
+    width: 30% !important;
+    height: 1em;
+    background-color: rgba(255, 0, 0, 0.7) !important;
+}
+
+.statusConcluida {
+    font-weight: bold;
+    color: green;
+    text-decoration: line-through;
+}
+
+.statusPendente {
+    font-weight: bold;
+    color: black;
+}
+
+.divDetalhes {
+    width: 100%;
+    height: 3em;
+}
+
+.detalhesTarefa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 3em;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    box-sizing: border-box;
+    background-color: rgba(223, 211, 211, 0.849);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.detalhesTarefa p {
+    color: rgba(0, 0, 0, 0.74);
+    text-align: justify;
+}

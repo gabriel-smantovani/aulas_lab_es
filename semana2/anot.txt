@@ -1,0 +1,15 @@
+window: mexe na janela (alert, confirm...)
+    location: url
+    
+    history: histórico do usuário
+        sessão: ram do servidor que guarda
+        sessão do usuário no navegador: até que se feche o navegador armazenando dados do cliente.
+        sessão local (local storage)
+    
+    document: corpo da página
+        form:
+            input:
+            label:
+            ...
+        link:
+        ...
